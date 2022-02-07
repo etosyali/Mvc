@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1dfbf37646a742a6b8043a943daffc1c" Name="Diagram1">
+        <EntityTypeShape EntityType="MVCTekrarModel.AltKategori" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTekrarModel.AnaKategori" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTekrarModel.Kitaplar" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTekrarModel.Satislar" Width="1.5" PointX="7.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTekrarModel.Yazarlar" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="MVCTekrarModel.FK_AltKategori_AnaKategori" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCTekrarModel.FK_Kitaplar_AltKategori" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCTekrarModel.FK_Kitaplar_AnaKategori" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCTekrarModel.FK_Kitaplar_Yazarlar" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCTekrarModel.FK_Kitaplar_Yazarlar1" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCTekrarModel.FK_Satislar_Kitaplar" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

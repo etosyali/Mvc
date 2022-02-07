@@ -1,0 +1,67 @@
+﻿@model IEnumerable<MVCTekrar.Models.AltKategori>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Alt Kategori Listesi (Elle)</h2>
+<div class="navbar">
+    <a href="/AltKategori/Create" class="btn btn-primary">Yeni Alt Kategori</a>
+    <a href="/AnaKategori/Index" class="btn btn-primary">Ana Kategori Listesi</a>
+</div>
+<div class="container">
+   
+    <table class="table table-bordered table-dark" >
+        <thead> 
+         <tr>
+             <th>
+                 Ana Kategori Adı
+             </th>
+             <th>
+                 Alt Kategori ID
+             </th>
+             <th>
+                 Alt Kategori Adı
+             </th>
+             <th>
+                 Güncelle
+             </th>
+             <th>
+                 Göster
+             </th>
+             <th>
+                 Sil
+             </th>
+
+
+         </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AnaKategori.KategoriAdi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AltKategoriId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AltKategoriAdi)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { item.AltKategoriId }) 
+                        </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { item.AltKategoriId }) 
+                        </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new { item.AltKategoriId })
+                    </td>
+                </tr>
+            }
+
+            </tbody> 
+    </table>
+</div>
+
